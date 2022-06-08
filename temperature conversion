@@ -1,0 +1,28 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{   
+    //Programming Assignment 1
+    //For Celsius
+    float x, y = 32, z = 0.55555556;
+    x;
+    cout << "Enter a value in Fahrenheit to get Celsius" << endl;
+    cin >> x;
+    float celciusA = (x-y)*z;
+    cout << celciusA << endl;
+  
+    // For Fahrenheit
+    float a, b = 1.8, c = 32;
+    a;
+    cout << "Enter a value in Celsius to get Fahrenheit" << endl;
+    cin >> a;
+    float fahrenheitA = (a*b)+32;
+    cout << fahrenheitA << endl;
+    
+
+    return 0;
+    
+    
+}
