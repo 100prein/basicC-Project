@@ -1,0 +1,58 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    srand(time(0));
+    
+    int x, guess, balance = 30;
+    char c;
+    char play;
+    bool choice;
+    
+    cout << "Welcome to Cold Lottery, where everyone dream" << endl;
+    cout << "Good. You'll guess a number between 1 and 10. " << endl;
+    cout << "Rules: $10 on first try, $7 on second try, $5 on third try and you lose $10 after 3rd try." << endl;
+    cin >> c;
+    
+    
+    do {
+        int luck = rand()%10 + 1;
+        
+        for ( x = 0; x < 3; x++ ){
+            
+                cout << "Balance: $" << balance << endl;
+                cout << "Enter your Guess -- between 1 -- 10" << endl;
+                cin >> guess;
+        
+            if ( guess == luck && x == 1) {
+                balance = balance + 10;
+            } else if ( guess == luck && x == 2 ) {
+                balance = balance + 7;
+            } else if ( guess == luck && x == 3 ) {
+                balance = balance + 5;
+            } else {
+                balance = balance - 5;
+            }
+            
+        } 
+           /* cout << "Balance: $" << balance << endl;// here is your balance.
+            cout << "what do you want to do? enter q to quit and p to play on" << endl; // do you want to play again
+            cin >> play;
+            
+            if (play == 'p') {
+                choice = true;
+            }
+            
+            if (play == 'q') {
+                choice = false;
+            }*/
+           
+            
+    } while ( balance >= 0 );  
+    cout << "balance: $" << balance << endl;
+    cout << "Thank you for playing" << endl;
+
+    return 0;
+    }
