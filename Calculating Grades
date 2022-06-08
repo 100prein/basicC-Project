@@ -1,0 +1,36 @@
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    int a, b ,c, d, e, x = 90;
+    cout << "Enter a value for Homework " << endl;
+    cin >> a;
+    cout << "Enter a value for Project " << endl;
+    cin >> b;
+    cout << "Enter a value for Quizzes " << endl;
+    cin >> c;
+    cout << "Enter a value for Exams " << endl;
+    cin >> d;
+    cout << "Enter a value for Fianl Exam " << endl;
+    cin >> e;
+    int homework = a*0.1;
+    int project = b*0.35;
+    int quiz = c*0.1;
+    int exams = d*0.3;
+    int final = e*0.15;
+    int average = (a+b+c+d+e)/5;
+
+    cout << "Homework: " << homework << endl;
+    cout << "Projects: " << project << endl;
+    cout << "Quizzes: " << quiz << endl;
+    cout << "Exams: " << exams << endl;
+    cout << "Final Exam: " << final << endl;
+    cout << "Weighted Grade: " << average << endl;
+    cout << "A = 90+, " << "B = 80+, " << "C = 70+, " << "D = 60+, " << "F > 60 " << endl;
+    cout << "Grade: " << average << endl;
+
+    return 0;
+}
