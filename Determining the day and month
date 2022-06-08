@@ -1,0 +1,82 @@
+1) Nested if-else statement:
+2) Switch case statement:''
+
+or day of the week
+Monday monday mon Mon 
+Then print day number 1 for monday etc ... */
+
+
+#include <iostream>
+
+using namespace std;
+
+    int main()
+    {   
+        
+    int b;
+    cout << "Please enter a number for the days of the week" << endl;
+    cin >> b;
+    switch(b)
+    
+    {
+        case 1:
+            cout << "Lunes" << endl;
+            break;
+        case 2:
+            cout << "Martes" << endl;
+            break;
+        case 3:
+            cout << "Miercoles" << endl;
+            break;
+        case 4:
+            cout << "Jueves" << endl;
+            break;
+        case 5:
+            cout << "Viernes" << endl;
+            break;
+        case 6:
+            cout << "Sabado" << endl;
+            break;
+        case 7:
+            cout << "Domingo" << endl;
+            break;
+        default:
+            cout << "Hmm, that is not the right number!" << endl;
+
+    return 0;
+    }
+    int x;
+        
+        cout << "Please enter any number for the month of the year." << endl;
+        cin >> x; 
+            {
+            if (x == 1)
+                cout << "Enero" << endl;
+            else if (x == 2)
+                cout << "Febrero" << endl;
+            else if (x == 3)
+                cout << "Marzo" << endl;
+            else if (x == 4)
+                cout << "Abril" << endl;
+            else if (x == 5)
+                cout << "Mayo" << endl;
+            else if (x == 6)
+                cout << "Junio" << endl;
+            else if (x == 7)
+                cout << "Julio" << endl;
+            else if (x == 8)
+                cout << "Agosto" << endl;
+            else if (x == 9)
+                cout << "Septiembre" << endl;
+            else if (x == 10)
+                cout << "Octubre" << endl;
+            else if (x == 11)
+                cout << "Noviembre" << endl;
+            else if (x == 12)
+                cout << "Deciembre" << endl;
+            else
+                cout << "Number not found, please reenter" << endl;
+                
+            return 0;
+            }
+}
