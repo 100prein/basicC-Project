@@ -1,0 +1,74 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    srand(time(0));
+    bool choice;
+    int x, guess, balance = 30, a = 10, b = 7, d = 5, first = 1, second = 2, third = 3, fourth = 4;
+    char c;
+    
+    cout << "Welcome to Cold Lottery, where everyone dream" << endl;
+    cout << "Good. You'll guess a number between 1 and 10. " << endl;
+    cout << "Rules: $10 on first try, $7 on second try, $5 on third try and you lose $10 after 3rd try." << endl;
+    cout << " Press c to continue." << endl;
+    cin >> c;
+    
+    do {
+        char play;
+        
+        int luck = rand()%10 + 1;
+        for ( x = 1; x < 4; x++ ){
+                cout << "Balance: $" << balance << endl;
+                cout << "Enter your Guess -- between 1 -- 10" << endl;
+                cin >> guess;
+        
+            if ( guess == luck && x == first ) {
+                balance = balance + a;
+                x = x + 3;
+            }
+            else if ( guess == luck && x == second ) {
+                balance = balance + b;
+                x = x + 2;
+            }
+            else if ( guess == luck && x == third ) {
+                balance = balance + d;
+                x = x + 1;
+            }}
+            
+            //When the user wins
+            if ( x == 5 ){
+                cout << "Balance: $" << balance << endl;
+                cout << "what do you want to do? enter q to quit and p to play on" << endl; // do you want to play again
+                cin >> play;
+                if ( play == 'p' ){
+                    choice = true;
+                }
+                else if ( play == 'q' ) {
+                    choice = false;
+                }
+            }
+            
+            // When the user did three tries
+            if ( x == fourth ){
+                balance = balance - d;
+                x = 0;
+                cout << "Balance: $" << balance << endl;
+                cout << "what do you want to do? enter q to quit and p to play on" << endl; // do you want to play again
+                cin >> play;
+                if ( play == 'p' ){
+                    choice = true;
+                }
+                else if ( play == 'q' ) {
+                    choice = false;
+                }
+                
+            }
+        }
+        while ( balance >= 5 && choice == true );
+            cout << "balance: $" << balance << endl;
+            cout << "Thank you for playing" << endl;
+
+    return 0;
+}
